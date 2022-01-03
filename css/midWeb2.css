@@ -1,0 +1,80 @@
+body {
+    background-image: url(../image/background.png);
+}
+.midWeb .mw1,
+.mw2,
+.mw3 {
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 20px;
+    height: 300px;
+    width: 300px;
+    margin-top: 20px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.midWeb .mw1:hover,
+.mw2:hover,
+.mw3:hover {
+    background-color: rgb(207, 207, 207);
+}
+
+table {
+    margin: 0 auto;
+}
+
+.menu {
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+
+.allMenu img {
+    border-radius: 10%;
+    -moz-border-radius: 10%;
+    -webkit-border-radius: 10%;
+}
+
+.allMenu a {
+    text-decoration: none;
+    color: black
+}
+
+table .oderMenu {
+    width: fit-content;
+    padding: 10px;
+    text-align: center;
+    float: inherit;
+    margin: 0em auto;
+    color: rgb(85, 164, 255);
+    background-color: rgb(231, 231, 231) ;
+    border-radius: 5px;
+    border: none;
+}
+table .oderMenu:hover {
+    background-color: rgb(85, 164, 255) ;
+    color: white;
+    border: 1px solid black
+}
+#show-popup #popup-content #cartOrder {
+    background-color: rgb(33, 66, 250);
+}
+
+.popup .popup-content .cartOrder .inForm {
+    width: fit-content;
+    padding: 0.5em 1em;
+    text-align: center;
+    float: inherit;
+    margin: 0em auto;
+    color: rgb(85, 164, 255);
+    background-color: rgb(231, 231, 231) ;
+    border-radius: 5px;
+    border: none;
+}
+.popup .popup-content .cartOrder .inForm:hover {
+    background-color: rgb(85, 164, 255) ;
+    color: white;
+}

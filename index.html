@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Case study</title>
+    <link rel="stylesheet" href="css/themeHeader.css">
+    <link rel="stylesheet" href="css/taskBar.css">
+    <link rel="stylesheet" href="css/midWeb.css">
+    <link rel="stylesheet" href="css/bottomWeb.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="css/slideshow.css">
+    <script src="javaScript/time.js"></script>
+</head>
+
+<body>
+    <!--tiêu đề và thanh tìm kiếm-->
+    <div class="headerWeb">
+        <table border="0">
+            <tr>
+                <td>
+                    <div id="icon"><a href="index.html" style="text-decoration: none;color: white;">
+                            <img src="image/icon.png">Ăn vặt Online</a></div>
+                </td>
+                <td>
+                    <div id="find"><input id="icon" type="input" class="findSomeThing"
+                            placeholder="Tìm kiếm sản phẩm !"></div>
+                </td>
+                <td><button type="submit" id="buttonFind" onclick="find()"><img src="image/search.png"></button></td>
+            </tr>
+            <tr>
+                <th colspan="3">
+                    <div style="text-align: right;color: white; margin-top: 25px; font-size: 15px;">
+                        <span href="#" id="popup-btn" style="color: white;">Gửi hỗ trợ</span>&nbsp;&nbsp;
+                    </div>
+                </th>
+            </tr>
+        </table>
+    </div>
+    <!--drop down -->
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="nut_dropdown">Thức ăn
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="noidung_dropdown">
+                <a href="data/food/food-anvat.html">Ăn vặt</a>
+                <a href="data/food/food-annhau.html">Ăn nhậu</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="nut_dropdown">Thức uống
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="noidung_dropdown">
+                <a href="data/drink/drink-coffe.html">Cafe</a>
+                <a href="data/drink/drink-nuocngot.html">Nước ngọt</a>
+                <a href="data/drink/drink-milktea.html">Trà sữa</a>
+                <a href="data/drink/drink-beer.html">Bia, rượu</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="nut_dropdown">Gọi thêm
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="noidung_dropdown">
+                <a href="data/tools/tool-goithem.html">phần thêm</a>
+                <a href="data/tools/tool-dungcu.html">Dụng cụ</a>
+            </div>
+        </div>
+        <div class="popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <div>
+                    <fieldset>
+                        <legend>phiếu gửi hỗ trợ</legend>
+                        <form action="data/guihotro.html" method="get">
+                            <p>Họ và tên</p>
+                            <input type="text" name="fullname" id="fullname" placeholder="họ và tên">
+                            <p>Email</p>
+                            <input type="email" name="email" id="email" placeholder="example@example.vn">
+                            <p>Vấn đề cần hỗ trợ</p>
+                            <textarea name="urAsk" id="ask" cols="50" rows="5"></textarea>
+                            <button type="submit" id="submitPopup">Gửi hỗ trợ</button>
+                        </form>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- mid web -->
+    <div class="midWeb">
+        <table border="0">
+            <tr>
+                <td>
+                    <a style="color: white;"><b>Thức uống: </b>Trà sữa, cà phê, ....</a>
+                    <div class="mw1">
+                        <div id="slideshow">
+                            <div class="slide-wrapper">
+                                <div class="slide"><img src="image/drink-img/slides/1.png">
+                                </div>
+                                <div class="slide"><img src="image/drink-img/slides/2.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td rowspan="3">
+                    <b style="color: white;">Âm nhạc ngày mới</b>
+                    <div class="mw4">
+                        <iframe style="border-radius:20px ;"
+                            src="https://open.spotify.com/embed/playlist/1Df7CdeZJ8JxzHO997trEg?utm_source=generator&theme=0"
+                            width="100%" height="980" frameBorder="0" allowfullscreen=""
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a style="color: white;"><b>Thức ăn và món nhậu: </b> đồ ăn vặt, đồ nhậu, bia, rượu....</a>
+                    <div class="mw2">
+                        <div id="slideshow">
+                            <div class="slide-wrapper">
+                                <div class="slide"><img src="image/food-img/slides/1.png">
+                                </div>
+                                <div class="slide"><img src="image/food-img/slides/2.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <a style="color: white;"><b>Đồ gọi thêm: </b>các loại topping, vật dụng,....</a>
+                    <div class="mw3">
+                        <div id="slideshow">
+                            <div class="slide-wrapper">
+                                <div class="slide"><img src="image/tools-img/slides/1.png">
+                                </div>
+                                <div class="slide"><img src="image/tools-img/slides/2.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td></td>
+            </tr>
+
+        </table>
+    </div>
+    <!-- bottom web -->
+    <div class="bottomWeb">
+        <table border="0">
+            <tr>
+                <td><span style="color: white;">Case study-Nguyễn Huỳnh Anh Tuấn - C1121I1</span></td>
+                <td style="text-align: right;"><a href="https://codegym.vn/" target="_blank"><img
+                            src="image/codegym.png" alt="codegym"></a></td>
+            </tr>
+        </table>
+
+    </div>
+</body>
+<script src="javaScript/popup.js"></script>
+<script src="javaScript/find.js"></script>
+<script src="javaScript/changeicon.js"></script>
+
+</html>

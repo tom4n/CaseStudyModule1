@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Case study</title>
+    <link rel="stylesheet" href="../../css/themeHeader.css">
+    <link rel="stylesheet" href="../../css/taskBar.css">
+    <link rel="stylesheet" href="../../css/midWeb2.css">
+    <link rel="stylesheet" href="../../css/bottomWeb.css">
+    <link rel="stylesheet" href="../../css/popup2.css">
+</head>
+
+<body>
+    <!--tiêu đề và thanh tìm kiếm-->
+    <div class="headerWeb">
+        <form action="#">
+            <table border="0">
+                <tr>
+                    <td>
+                        <div id="icon"><a href="../../index.html" style="text-decoration: none;color: white;"><img
+                                    src="../../image/icon.png">Ăn vặt Online</a></div>
+                    </td>
+                    <td>
+                        <div id="find"><input id="icon" type="input" class="findSomeThing"
+                                placeholder="Tìm kiếm sản phẩm !"></div>
+                    </td>
+                    <td><button type="submit" id="buttonFind" onclick="find()"><img
+                                src="../../image/search.png" /></button></td>
+                </tr>
+                <tr style="text-align: right;">
+                    <td colspan="3"><a href="#show-popup" id="cartInfo"
+                            style="text-decoration: none;color: white; font-size: 15px;">Cart(0)</a></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <!--drop down --> 
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="nut_dropdown">Thức ăn
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="noidung_dropdown">
+                <a href="../../data/food/food-anvat.html">Ăn vặt</a>
+                <a href="../../data/food/food-annhau.html">Ăn nhậu</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="nut_dropdown">Thức uống
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="noidung_dropdown">
+                <a href="drink-coffe.html">Cafe</a>
+                <a href="drink-nuocngot.html">Nước ngọt</a>
+                <a href="drink-milktea.html">Trà sữa</a>
+                <a href="drink-beer.html">Bia, rượu</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="nut_dropdown">Gọi thêm
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="noidung_dropdown">
+                <a href="../tools/tool-goithem.html">phần thêm</a>
+                <a href="../tools/tool-dungcu.html">Dụng cụ</a>
+            </div>
+        </div>
+    </div>
+    <!-- popup mua hàng -->
+    <div id="show-popup" class="popup" href="#">
+        <div class="popup-content">
+            <div id="content" class="cartOrder">
+                <div id="form_1">
+                    <fieldset>
+                        <legend><b> Đặt món </b></legend>
+                        <form action="../doneOrder.html" method="get">
+                            <table border="0" style="width: 500px; text-align: left;">
+                                <tr>
+                                    <th>Họ và tên</th>
+                                    <th>Số điện thoại</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="text" name="fullname" id="fullname" placeholder="họ và tên"
+                                            required>
+                                    </td>
+                                    <td>
+                                        <input type="tel" name="email" id="phoneNumber" placeholder="0123456789"
+                                            required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">địa chỉ</th>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">
+                                        <textarea name="" id="" cols="70" rows="2" required></textarea>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">Ghi chú</th>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">
+                                        <textarea name="" id="" cols="70" rows="7"></textarea>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <b>Phương thức thanh toán</b><br>
+                                        <input type="radio" name="payment" id="zaloPay" required>
+                                        <img src="../../image/payment/zalo.png" alt="zalo">
+                                        <input type="radio" name="payment" id="Momo" required>
+                                        <img src="../../image/payment/momo.png" alt="momo">
+                                        <input type="radio" name="payment" id="bank" required>
+                                        <img src="../../image/payment/bank.png" alt="bank">
+                                    </td>
+                                </tr>
+                            </table>
+                            <button class="inForm" type="submit">Đặt hàng</button>
+                            <button class="inForm" onclick="deleteProduct()" type="button">Xóa đơn hàng</button>
+                        </form>
+                    </fieldset>
+                </div>
+                <div id="form_2">
+                    <fieldset>
+                        <legend><b>thông tin đơn hàng</b></legend>
+                        <table id="infoMenu" border="0" style="width: 500px; text-align: center;">
+                            <thead>
+                                <tr style="background-color: orange;">
+                                    <th>Sản phẩm</th>
+                                    <th>Số Lượng</th>
+                                    <th>Đơn giá</th>
+                                </tr>
+                                <hr>
+                            </thead>
+                        </table>
+                    </fieldset>
+
+                    <hr>
+                    <center>Chúc quý khách vui vẻ, hẹn gặp lại !</center>
+                </div>
+            </div>
+            <a href="#" class="close">x</a>
+        </div>
+    </div>
+    <!-- mid web -->
+    <div class="midWeb">
+        <table border="0" class="allMenu">
+            <tr>
+                <td>
+                    <div class="mw1">
+                        <div class="menu"><img src="../../image/drink-img/TSduongden.png" alt="TSduongden"></div>
+                        <span>Trà sữa trân châu đường đen</span><br>
+                        <span>15.000 VND</span>
+                        <div class="button"><button onclick="takeOder(this.id)" class="oderMenu" id="31">
+                                Mua ngay</button></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="mw1">
+                        <div class="menu"><img src="../../image/drink-img/TSmatcha.png" alt="TSmatcha"></div>
+                        <span>Trà sữa matcha</span><br>
+                        <span>20.000 VND</span>
+                        <div class="button"><button onclick="takeOder(this.id)" class="oderMenu" id="32">
+                                Mua ngay</button></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="mw1">
+                        <div class="menu"><img src="../../image/drink-img/TSkhoaimon.png" alt="TSkhoaimon"></div>
+                        <span>Trà sữa khoai môn</span><br>
+                        <span>20.000 VND</span>
+                        <div class="button"><button onclick="takeOder(this.id)" class="oderMenu" id="33">
+                                Mua ngay</button></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="mw1">
+                        <div class="menu"><img src="../../image/drink-img/TSsocola.png" alt="TSsocola"></div>
+                        <span>Trà sữa socola</span><br>
+                        <span>15.000 VND</span>
+                        <div class="button"><button onclick="takeOder(this.id)" class="oderMenu" id="34">
+                                Mua ngay</button></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="mw2">
+                        <div class="menu"><img src="../../image/drink-img/Tradao.png" alt="Tradao"></div>
+                        <span>Trà đào</span><br>
+                        <span>15.000 VND</span>
+                        <div class="button"><button onclick="takeOder(this.id)" class="oderMenu" id="35">
+                                Mua ngay</button></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="mw2">
+                        <div class="menu"><img src="../../image/drink-img/Travai.png" alt="Travai"></div>
+                        <span>Trà vải</span><br>
+                        <span>25.000 VND</span>
+                        <div class="button"><button onclick="takeOder(this.id)" class="oderMenu" id="36">
+                                Mua ngay</button></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="mw2">
+                        <div class="menu"><img src="../../image/drink-img/TSdautay.png" alt="TSdautay"></div>
+                        <span>Trà sữa dâu tây</span><br>
+                        <span>18.000 VND</span>
+                        <div class="button"><button onclick="takeOder(this.id)" class="oderMenu" id="37">
+                                Mua ngay</button></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="mw2">
+                        <div class="menu"><img src="../../image/drink-img/TStrungga.jpg" alt="TStrungga"></div>
+                        <span>Trà sữa trứng gà</span><br>
+                        <span>19.000 VND</span>
+                        <div class="button"><button onclick="takeOder(this.id)" class="oderMenu" id="38">
+                                Mua ngay</button></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="mw3">
+                        <div class="menu"><img src="../../image/drink-img/TShongtra.png" alt="TShongtra"></div>
+                        <span>Hồng trà</span><br>
+                        <span>35.000 VND</span>
+                        <div class="button"><button onclick="takeOder(this.id)" class="oderMenu" id="39">
+                                Mua ngay</button></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="mw3">
+                        <div class="menu"><img src="../../image/drink-img/TSnguyenchat.png" alt="TSnguyenchat"></div>
+                        <span>Trà sữa nguyên chất</span><br>
+                        <span>10.000 VND</span>
+                        <div class="button"><button onclick="takeOder(this.id)" class="oderMenu" id="40">
+                                Mua ngay</button></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="mw3">
+                        <div class="menu"><img src="../../image/drink-img/TSbich.png" alt="TSbich"></div>
+                        <span>Trà sữa bịch khủng lồ</span><br>
+                        <span>100.000 VND</span>
+                        <div class="button"><button onclick="takeOder(this.id)" class="oderMenu" id="41">
+                                Mua ngay</button></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="mw3">
+                        <div class="menu"><img src="../../image/drink-img/TSchai.png" alt="TSchai"></div>
+                        <span>Trà sữa chai khủng lồ</span><br>
+                        <span>110.000 VND</span>
+                        <div class="button"><button onclick="takeOder(this.id)" class="oderMenu" id="42">
+                                Mua ngay</button></div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!-- bottom web -->
+    <div class="bottomWeb">
+        <table border="0">
+            <tr>
+                <td><span style="color: white;">Case study-Nguyễn Huỳnh Anh Tuấn - C1121I1</span></td>
+                <td style="text-align: right;"><a href="https://codegym.vn/" target="_blank"><img
+                            src="../../image/codegym.png" alt="codegym"></a></td>
+            </tr>
+        </table>
+
+    </div>
+</body>
+<script src="../../javaScript/database.js"></script>
+<script src="../../javaScript/find.js"></script>
+
+</html>

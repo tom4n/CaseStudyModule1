@@ -1,0 +1,22 @@
+body {
+    background-image: url(../image/background.png);
+    margin: 0;
+}
+.midWeb .mw1, .mw2, .mw3 {
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 20px;
+    height: 300px;
+    width: 1100px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.midWeb .mw4 {
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 20px;
+    height: 950px;
+    width: 330px;
+    margin-top: 0px;
+    margin-left: 10px;
+}

@@ -1,0 +1,11 @@
+.bottomWeb {
+    background-color: rgb(38, 63, 105);
+    padding: 1%;
+    font-weight: normal;
+    font-size: 15px;
+    height: 30px;
+    margin-top: 20px;
+}
+.bottomWeb table {
+    width: 1450px;
+}

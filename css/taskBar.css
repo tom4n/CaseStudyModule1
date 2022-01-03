@@ -1,0 +1,74 @@
+
+/* task bar 1 */
+/* thanh navigation */
+.navbar {
+    overflow: hidden;
+    background-color: rgb(38, 63, 105);
+    font-family: Arial;
+  }
+  
+  /* đường dẫn bên trong navigation */
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* thành phần dropdown */
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  /* nút dropdown */
+  .dropdown .nut_dropdown {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; 
+    margin: 0;
+  }
+  
+  /* thêm màu background khi nút dropdown khi hover */
+  .navbar a:hover, .dropdown:hover .nut_dropdown {
+    background-color: rgb(49, 80, 133);
+  }
+  
+  /* Ẩn nội dung dropdown*/
+  .noidung_dropdown {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* thiết lập style cho đường dẫn bên trong dropdown */
+  .noidung_dropdown a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  /* chọn background cho đường dẫn bên trong dropdown khi hover*/
+  .noidung_dropdown a:hover {
+    background-color: rgb(202, 202, 202);
+  }
+  
+  /* Hiển thị nội dung dropdown khi được hover */
+  .dropdown:hover .noidung_dropdown {
+    display: block;
+  }
+  
+
+  

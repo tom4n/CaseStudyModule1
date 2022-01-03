@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Case study</title>
+    <link rel="stylesheet" href="../css/themeHeader.css">
+    <link rel="stylesheet" href="../css/taskBar.css">
+    <link rel="stylesheet" href="../css/midWeb.css">
+    <link rel="stylesheet" href="../css/bottomWeb.css">
+    <link rel="stylesheet" href="../css/popup.css">
+    <link rel="stylesheet" href="../css/slideshow.css">
+</head>
+
+<body>
+    <!--tiêu đề và thanh tìm kiếm-->
+    <div class="headerWeb">
+        <form action="#">
+            <table border="0">
+                <tr>
+                    <td>
+                        <div id="icon"><a href="../index.html" style="text-decoration: none;color: white;"><img
+                                    src="../image/icon.png">Ăn vặt Online</a></div>
+                    </td>
+                    <td>
+                        <div id="find"><input id="icon" type="input" class="findSomeThing"
+                                placeholder="Tìm kiếm sản phẩm !"></div>
+                    </td>
+                    <td><button type="submit" id="buttonFind" onclick="find()"><img src="../image/search.png" /></button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <!--drop down -->
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="nut_dropdown">Thức ăn
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="noidung_dropdown">
+                <a href="../data/food/food-anvat.html">Ăn vặt</a>
+                <a href="../data/food/food-annhau.html">Ăn nhậu</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="nut_dropdown">Thức uống
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="noidung_dropdown">
+                <a href="../data/drink/drink-coffe.html">Cafe</a>
+                <a href="../data/drink/drink-nuocngot.html">Nước ngọt</a>
+                <a href="../data/drink/drink-milktea.html">Trà sữa</a>
+                <a href="../data/drink/drink-beer.html">Bia, rượu</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="nut_dropdown">Gọi thêm
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="noidung_dropdown">
+                <a href="../data/tools/tool-goithem.html">phần thêm</a>
+                <a href="../data/tools/tool-goithem.html">Dụng cụ</a>
+            </div>
+        </div>
+       
+    </div>
+    <!-- mid web -->
+    <div style="height: 530px; background-color: white; border-radius: 20px ; top: 10px; position: relative; text-align: center;">
+      <h1 id="doneO">Chúng tôi đã nhận được đơn hàng và đang ship đến cho bạn !</h1>
+      <img src="../image/ship.png" alt="thanks">
+    </div>
+    <!-- bottom web -->
+    <div class="bottomWeb">
+        <table border="0">
+            <tr>
+                <td><span style="color: white;">Case study-Nguyễn Huỳnh Anh Tuấn - C1121I1</span></td>
+                <td style="text-align: right;"><a href="https://codegym.vn/" target="_blank"><img
+                            src="../image/codegym.png" alt="codegym"></a></td>
+            </tr>
+        </table>
+
+    </div>
+</body>
+<script src="../javaScript/find.js"></script>
+</html>
